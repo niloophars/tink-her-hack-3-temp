@@ -1,8 +1,8 @@
-# [Project Name] 🎯
+# Prep Mate
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: Her Hack
 
 
 ### Team Members
