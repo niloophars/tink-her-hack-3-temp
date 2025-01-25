@@ -6,9 +6,9 @@
 
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Member 1: Sruthi Jayaram-Cusat
+- Member 2: Minha Fathima - Cusat
+- Member 3: Niloophar Sulthana - Cusat
 
 ### Hosted Project Link
 [mention your project hosted project link here]
