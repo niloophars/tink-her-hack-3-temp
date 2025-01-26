@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url('https://i.pinimg.com/736x/f2/84/1e/f2841e80fcca718eef4ebcd9beeae041.jpg'); /* Add your image URL here */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    form {
+      background-color: white;
+      border: 2px solid #d19c97;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #d19c97;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #d19c97;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #b67b73;
+    }
+  </style>
+</head>
+<body>
+  <form id="User Profile" action="index.html" method="get">
+
+    <h2>User Profile</h2>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="0" placeholder="Enter your age" required>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+      <option value="">Select</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Enter your phone number" required>
+
+    <label>Do you have any allergies?</label>
+    <select id="hasAllergy" name="hasAllergy" required>
+      <option value="">Select</option>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+
+    <div id="allergyDetails" class="hidden">
+      <label for="allergy">Please specify your allergies:</label>
+      <textarea id="allergy" name="allergy" placeholder="Describe your allergies..."></textarea>
+    </div>
+
+    <label>Do you have any diseases?</label>
+    <select id="hasDisease" name="hasDisease" required>
+      <option value="">Select</option>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+
+    <div id="diseaseDetails" class="hidden">
+      <label for="disease">Please specify your diseases:</label>
+      <textarea id="disease" name="disease" placeholder="Describe your diseases..."></textarea>
+    </div>
+
+    <button type="submit">Submit</button>
+
+   
+  </form>
+
+  <script>
+    document.getElementById('hasAllergy').addEventListener('change', function () {
+      const allergyDetails = document.getElementById('allergyDetails');
+      if (this.value === 'yes') {
+        allergyDetails.classList.remove('hidden');
+      } else {
+        allergyDetails.classList.add('hidden');
+      }
+    });
+
+    document.getElementById('hasDisease').addEventListener('change', function () {
+      const diseaseDetails = document.getElementById('diseaseDetails');
+      if (this.value === 'yes') {
+        diseaseDetails.classList.remove('hidden');
+      } else {
+        diseaseDetails.classList.add('hidden');
+      }
+    });
+
+
+  </script>
+</body>
+</html>
