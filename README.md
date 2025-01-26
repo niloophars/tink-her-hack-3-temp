@@ -2,7 +2,7 @@
 
 
 ## Basic Details
-### Team Name: Her Hack
+### Team Name:Hackoholics
 
 
 ### Team Members
@@ -14,26 +14,21 @@
 [mention your project hosted project link here]
 
 ### Project Description
-[2-3 lines about what your project does]
+"Prep Mate is your ultimate meal planning companion, designed to simplify your food choices while prioritizing your health and wellness. Whether you're looking for meals based on your dietary preferences, meal timing, or specific health needs like diabetes, allergies, or weight loss goals, Prep Mate tailors meal suggestions just for you
 
 ### The Problem statement
-[What ridiculous problem are you solving?]
+Many people struggle to maintain a healthy diet due to time constraints and the lack of personalized meal planning options. Those with specific needs, like managing diseases, allergies, face even greater challenges. There’s a need for a smart, user-friendly solution that simplifies meal planning  for diverse preferences and health goals.Start planning smarter, eating better, and living healthier with Prep Mate today!"
 
 ### The Solution
-[How are you solving it? Keep it fun!]
+Prep Mate solves this problem by offering an intelligent meal planning app that personalizes food recommendations based on meal type,cooking timing, dietary preferences, and specific health needs like diseases, allergies. Using smart algorithms, the app analyzes user inputs to generate tailored meal plans that are both nutritious and convenient. With an easy-to-use interface and a focus on health-conscious choices, Prep Mate empowers users to take control of their diet, simplify meal planning, and achieve their wellness goals effortlessly.
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
-
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
+-Frontend: Html,Css,Javascript
+-Framework: Bootstrap,TailwindCSS
+-Backend:python(flask)
+-Database:Firebase
 
 ### Implementation
 For Software:
