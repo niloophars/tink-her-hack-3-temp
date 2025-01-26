@@ -2,7 +2,7 @@
 
 
 ## Basic Details
-### Team Name: Her Hack
+### Team Name:Hackoholics
 
 
 ### Team Members
