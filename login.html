@@ -3,66 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prepmate - Cooking Companion</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <title>Prep Mate - Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <style>
         body {
-            background-image: url('/api/placeholder/1920/1080');
+            font-family: Arial, sans-serif;
+            background-image: url('https://img.freepik.com/free-photo/herbs-vegetables-white-background_23-2147828984.jpg?t=st=1737819060~exp=1737822660~hmac=7cff7e50839bade6f3d02bf90f5b7141e0092b417baeee8e0477edf56a05ac61&w=900');
             background-size: cover;
-            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
         }
-        .login-container {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(10px);
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 350px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .logo span {
+            color: #d19c97;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .login-btn {
+            background-color: #d19c97;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .login-btn:hover {
+            background-color: #c0867e;
+        }
+
+        .form-footer {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-footer a {
+            color: #d19c97;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .signup-link {
+            margin-top: 15px;
         }
     </style>
-</head>
-<script src="script.js"></script>
-<link rel="stylesheet" href="style.css">
-<body class="flex items-center justify-center min-h-screen bg-gray-100">
-    <div class="login-container w-full max-w-md p-8 space-y-6 rounded-xl shadow-2xl">
-        <div class="text-center">
-            <h1 class="text-4xl font-bold text-orange-600 mb-4">Prep Mate</h1>
-            <p class="text-gray-600">Your Culinary Companion</p>
+    </head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <span>Prep</span> Mate
         </div>
-        
-        <form class="space-y-4">
-            <div>
-                <input 
-                    type="email" 
-                    placeholder="Email" 
-                    required 
-                    class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
-                >
-            </div>
-            <div>
-                <input 
-                    type="password" 
-                    placeholder="Password" 
-                    required 
-                    class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
-                >
-            </div>
-            
-            <div class="flex justify-between items-center">
-                <a href="#" class="text-sm text-orange-600 hover:underline">Forgot Password?</a>
-            </div>
-            
-            <button 
-                type="submit" 
-                class="w-full p-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition duration-300"
-            >
-                Login
-            </button>
+
+        <!-- Display flash messages -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="flash-messages">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        <!-- Login form -->
+        <form id="loginForm" action="{{ url_for('login') }}" method="POST">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit" class="login-btn">Login</button>
         </form>
-        
-        <div class="text-center">
-            <p class="text-gray-600">Don't have an account?</p>
-            <button 
-                class="w-full p-3 mt-2 border-2 border-orange-600 text-orange-600 rounded-lg hover:bg-orange-100 transition duration-300"
-            >
-                Sign Up
-            </button>
+
+        <!-- Sign up link -->
+        <div class="signup-link">
+            <p>Don't have an account? <a href="{{ url_for('profile') }}">Sign Up</a></p>
         </div>
     </div>
 </body>
