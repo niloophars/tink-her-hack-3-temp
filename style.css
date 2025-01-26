@@ -1,0 +1,109 @@
+/* Global Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-image: url('https://img.freepik.com/free-photo/herbs-vegetables-white-background_23-2147828984.jpg?t=st=1737819060~exp=1737822660~hmac=7cff7e50839bade6f3d02bf90f5b7141e0092b417baeee8e0477edf56a05ac61&w=900');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+}
+
+/* Container Styles */
+.container {
+    background-color: rgba(255,255,255,0.85);
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    width: 400px;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Logo Styles */
+.logo {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #4ecdc4;
+    box-shadow: 0 0 10px rgba(78,205,196,0.2);
+}
+
+/* Button Styles */
+.btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(to right, #ff6b6b, #4ecdc4);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Form Footer Styles */
+.form-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-footer a {
+    color: #4ecdc4;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.form-footer a:hover {
+    color: #ff6b6b;
+}
+
+/* Toggle Form Styles */
+.toggle-form {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #5a5a5a;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        margin: 0 10px;
+    }
+}
