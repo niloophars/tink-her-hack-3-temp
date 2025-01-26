@@ -86,9 +86,9 @@ For Hardware:
 [Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+-Sruthi Jayaram: Backend,Database
+- Minha Fathima: Frontend
+-Niloophar Sulthana:Frontend
 
 ---
 Made with ❤️ at TinkerHub
