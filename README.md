@@ -77,7 +77,7 @@ For Hardware:
 ![Final](Add photo of final product here)
 *Explain the final build*
 
-### Project Demo
+### Project Dem
 # Video
 [Add your demo video link here]
 *Explain what the video demonstrates*
